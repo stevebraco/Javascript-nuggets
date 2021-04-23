@@ -18,17 +18,21 @@ const youngPeople = people.filter((person) => {
 console.log(youngPeople); // [ { name: "bob", age: 20, position: "developer" }, { name: "peter", age: 25, position: "designer" } ]
 const developers = people.filter((person) => person.position === "developer");
 console.log(developers); // [ { name: "bob", age: 20, position: "developer" } ]
+
 // no match
 const seniorDevs = people.filter((person) => person.position === "senior");
 console.log(seniorDevs); // [] retourn un tableau vide
+
 // find
 const peter = people.find((person) => person.name === "peter");
 console.log(peter); // { name: "peter", age: 25, position: "designer" }
 const fruit = fruits.find(fruit => fruit === 'lemon')
 console.log(fruit); // lemon
+
 // no match
 const oldPerson = people.find( person => person.age > 35);
 console.log(oldPerson); // undefined
+
 // multiple matchs - first match
 const randomPerson = people.find(person => person.age < 35);
 console.log(randomPerson); // { name: "bob", age: 20, position: "developer" }
