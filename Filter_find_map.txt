@@ -1,3 +1,9 @@
+La méthode filter() crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction callback.
+
+La méthode find() renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée.
+
+La méthode map() crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
+
 const tab = [
         { id: 1, name: 'Steve Braco', poste: 'meneur' },
         { id: 2, name: 'Lebron James', poste: 'aillier' },
