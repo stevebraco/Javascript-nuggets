@@ -4,6 +4,9 @@ La méthode find() renvoie la valeur du premier élément trouvé dans le tablea
 
 La méthode map() crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
 
+    //La méthode sort() trie les éléments d'un tableau, dans ce même tableau, et renvoie le tableau. Par défaut, le tri s'effectue sur les éléments du tableau convertis en chaînes de caractères et triées selon les valeurs des unités de code UTF-16 des caractères.
+
+
 const tab = [
         { id: 1, name: 'Steve Braco', poste: 'meneur' },
         { id: 2, name: 'Lebron James', poste: 'aillier' },
@@ -77,3 +80,24 @@ const tab = [
     const tab3 = ['banane', 'orange', 'peche', 'pomme']
     const [banane, , , pomme] = tab3
     console.log(banane, pomme); // banane pomme
+    
+    // SORT
+    const months = ['Janvier', 'Février','Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre']
+    const number = ['1', '2', '3']
+
+    let tempMonths = [...months]
+    let tempNumber = [...number]
+
+    
+
+    const croissant = tempMonths.sort((a, b) => {
+        return a.localeCompare(b)
+
+    })
+    console.log(croissant); // ["Aout", "Avril", "Décembre", "Février", "Janvier", "Juillet", "Juin", "Mai", "Mars", "Novembre", "Octobre", "Septembre"]
+
+    const decroissant = tempMonths.sort((a, b) => {
+        return b.localeCompare(a)
+
+    })
+    console.log(decroissant); // ["Septembre", "Octobre", "Novembre", "Mars", "Mai", "Juin", "Juillet", "Janvier", "Février", "Décembre", "Avril", "Aout"]
