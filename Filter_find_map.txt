@@ -1,0 +1,73 @@
+const tab = [
+        { id: 1, name: 'Steve Braco', poste: 'meneur' },
+        { id: 2, name: 'Lebron James', poste: 'aillier' },
+        { id: 3, name: 'Tim Duncan', poste: 'aillier fort' },
+        { id: 4, name: 'Chris Bosh', poste: 'aillier fort' },
+        { id: 5, name: 'Allen Iverson', poste: 'arrière' },
+        { id: 6, name: 'Damian Lillard', poste: 'meneur' },
+        { id: 7, name: 'Klay Thompson', poste: 'arrière' },
+        { id: 8, name: 'Stephen Curry', poste: 'meneur' },
+        { id: 9, name: 'Kevin Durant', poste: 'aillier' },
+        { id: 10, name: 'Bradley Beal', poste: 'arrière' },
+        { id: 11, name: 'Paul George', poste: 'arrière' },
+        { id: 12, name: 'Carmelo Anthony', poste: 'aillier' },
+        { id: 13, name: 'Stephen Curry', poste: 'meneur' },
+        { id: 14, name: 'James Harden', poste: 'meneur' },
+        { id: 15, name: 'Demarcus Cousins', poste: 'pivot' },
+        { id: 16, name: 'Kyrie Irving', poste: 'meneur' },
+        { id: 17, name: 'Nikola Jokic', poste: 'pivot' },
+        { id: 18, name: 'Zach Lavine', poste: 'arrière' },
+        { id: 19, name: 'Kawhi Leonard', poste: 'aillier' },
+        { id: 20, name: 'Donovan Mitchell', poste: 'arrière' },
+    ]
+
+    const meneur = tab.filter((item) => item.poste === 'meneur')
+    console.log(meneur);
+    // 0: {id: 1, name: "Steve Braco", poste: "meneur"}
+    // 1: {id: 6, name: "Damian Lillard", poste: "meneur"}
+    // 2: {id: 8, name: "Stephen Curry", poste: "meneur"}
+    // 3: {id: 13, name: "Stephen Curry", poste: "meneur"}
+    // 4: {id: 14, name: "James Harden", poste: "meneur"}
+    // 5: {id: 16, name: "Kyrie Irving", poste: "meneur"}
+    const ajout = [...tab, { id: 21, name: 'Kemba Walker', poste: 'meneur' }];
+    console.log(ajout); // 20: {id: 21, name: "Kemba Walker", poste: "meneur"}
+    const topTen = tab.filter((item) => item.id <= 10)
+    console.log('Top 10', topTen);
+    //     0: {id: 1, name: "Steve Braco", poste: "meneur"}
+    // 1: {id: 2, name: "Lebron James", poste: "aillier"}
+    // 2: {id: 3, name: "Tim Duncan", poste: "aillier fort"}
+    // 3: {id: 4, name: "Chris Bosh", poste: "aillier fort"}
+    // 4: {id: 5, name: "Allen Iverson", poste: "arrière"}
+    // 5: {id: 6, name: "Damian Lillard", poste: "meneur"}
+    // 6: {id: 7, name: "Klay Thompson", poste: "arrière"}
+    // 7: {id: 8, name: "Stephen Curry", poste: "meneur"}
+    // 8: {id: 9, name: "Kevin Durant", poste: "aillier"}
+    // 9: {id: 10, name: "Bradley Beal", poste: "arrière"}
+    const findJames = tab.find((item) => item.name === 'James Harden')
+    console.log(findJames.name); // James Harden
+
+    const newPerson = tab.map((item) => {
+        return {
+            firstName: item.name.toLocaleUpperCase(),
+            poste: item.poste
+        }
+    })
+    newPerson.filter((item) => {
+        if (item.poste === 'meneur') {
+            item.poste = 'Point Guard'
+        }
+    })
+    console.log(newPerson); // (20) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+    // example 0: {firstName: "STEVE BRACO", poste: "Point Guard"}
+
+    const uniqueValues = new Set(tab.map((item) => item.poste))
+    console.log(uniqueValues); // Set(5) {"meneur", "aillier", "aillier fort", "arrière", "pivot"
+
+    const tab2 = [
+        colors = [1, 2, 3, 4]
+    ]
+    console.log(tab2.flat()); // (4) [1, 2, 3, 4]
+    // Destructuring array
+    const tab3 = ['banane', 'orange', 'peche', 'pomme']
+    const [banane, , , pomme] = tab3
+    console.log(banane, pomme); // banane pomme
